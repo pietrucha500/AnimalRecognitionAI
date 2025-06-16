@@ -29,10 +29,10 @@ Dodatkowo zastosowałem augmentację danych poprzez modyfikację danych podczas 
 Dane zostały podzielone w proporcji train/val/test = 70/15/15
 ### Wyniki:
 Wytrenowany model osiągnął następujące wyniki:
-- Train loss:
-- Train accuracy:
-- Test loss:
-- Test accuracy:
+- Train loss: 0.1225
+- Train accuracy: 96.60%
+- Test loss: 0.1243
+- Test accuracy: 96.62%
 
 ---
 
@@ -74,8 +74,8 @@ pip install -r requirements.txt
 ```
 ## Instalacja
 ```bash
-git clone https://github.com/twoj-repo/twoj-projekt.git
-cd twoj-projekt
+git clone https://github.com/pietrucha500/AnimalRecognitionAI.git
+cd AnimalRecognitionAI
 pip install -r requirements.txt
 ```
 
@@ -122,6 +122,7 @@ streamlit run app.py
 ├── app.py              # plik tworzący interaktywną aplikację do testowania modelu
 ├── modelshowcase.ipynb # plik prezentujący działanie modelu
 ├── best_model.pth      # plik z zapisanym modelem
+├── model.png           # wizualizacja modelu
 ├── README.md           # plik README
 ├── LICENSE             # plik licencji
 └── requirements.txt    # lista pakietów Python
