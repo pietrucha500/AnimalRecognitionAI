@@ -20,19 +20,32 @@ Swój model zbudowałem na podstawie [ResNet50](https://arxiv.org/abs/1512.03385
 - Szybkość i skuteczność dzięki skip connections  
 
 Dodatkowo zastosowałem augmentację danych poprzez modyfikację danych podczas treningu:
-- Przycięcie obrazu do losowego fragmentu obrazu
+- Przycięcie obrazu do losowego fragmentu obrazu (80%-100%)
 - Losowe odbicie poziome
-- Losowy obrót o maksymalnie +- 15 stopni
+- Losowy obrót o maksymalnie +- 10 stopni
 - Losowa zmiana jasności, kontrastu i nasycenia
-- Losowe przesunięcie obrazu
+- Losowa translacja obrazu
 
 Dane zostały podzielone w proporcji train/val/test = 70/15/15
 ### Wyniki:
-Wytrenowany model osiągnął następujące wyniki:
-- Train loss: 0.1225
-- Train accuracy: 96.60%
-- Test loss: 0.1243
-- Test accuracy: 96.62%
+Wytrenowany model osiągnął następujące wyniki:  
+- Test Loss: 0.2395  
+- Test Accuracy: 0.9352
+
+| Klasa      | Precision | Recall | F1-score | Support |
+|------------|-----------|--------|----------|---------|
+| butterfly  | 0.96      | 0.94   | 0.95     | 580     |
+| cat        | 0.91      | 0.92   | 0.92     | 464     |
+| chicken    | 0.95      | 0.95   | 0.95     | 851     |
+| cow        | 0.95      | 0.86   | 0.90     | 524     |
+| elephant   | 0.95      | 0.94   | 0.94     | 401     |
+| horse      | 0.95      | 0.91   | 0.93     | 726     |
+| sheep      | 0.88      | 0.94   | 0.91     | 512     |
+| spider     | 0.97      | 0.96   | 0.97     | 1342    |
+| squirrel   | 0.90      | 0.96   | 0.93     | 518     |
+| **accuracy**    |           |        | **0.94**     | 7288    |
+| **macro avg**   | 0.93      | 0.93   | 0.93     | 7288    |
+| **weighted avg**| 0.94      | 0.94   | 0.94     | 7288    |
 
 ---
 
@@ -59,6 +72,7 @@ Wytrenowany model osiągnął następujące wyniki:
 - numpy<2.0
 - pillow
 - matplotlib
+- scikit-learn
 #### Zapis modeli i wyniki
 - tqdm
 - pillow
@@ -86,7 +100,7 @@ python main.py --train_dir ".\data\train" --val_dir ".\data\val" --epochs 1000 -
 ```
 W przypadku zatrzymania treningu, można go wznowić od wybranego checkpointu:
 ```bash
-python main.py --train_dir ".\data\train" --val_dir ".\data\val" --checkpoint checkpoints/epoch_number.pth
+python main.py --train_dir ".\data\train" --val_dir ".\data\val" --checkpoint checkpoints/epoch_number.pth --epochs 200 --batch_size 32
 ```
 Aby przeprowadzić ewaluację modelu:
 ```bash

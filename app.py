@@ -9,6 +9,8 @@ from utils.train_eval import evaluate
 
 model = resnet50()
 model.load_state_dict(torch.load('best_model.pth'))
+model.eval()
+
 _, class_names = create_data_loader(".\\data\\val", batch_size=1, is_train=False)
 
 uploaded_file = st.file_uploader("Wgraj obrazek", type=["jpg", "jpeg", "png"])

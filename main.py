@@ -8,7 +8,7 @@ from utils.dataset import create_data_loader
 # python main.py --train_dir ".\data\train" --val_dir ".\data\val" --epochs 1000 --batch_size 32
 
 # od checkpointu:
-# python main.py --train_dir ".\data\train" --val_dir ".\data\val" --checkpoint checkpoints/epoch_number.pth
+# python main.py --train_dir ".\data\train" --val_dir ".\data\val" --checkpoint checkpoints/epoch_number.pth --epochs 200 --batch_size 32
 
 def main(args):
     print(f"\nGPU Info:")
@@ -78,7 +78,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Train ResNet18 on animal image classification dataset")
     parser.add_argument('--train_dir', type=str, required=True, help="Path to training data folder")
     parser.add_argument('--val_dir', type=str, required=True, help="Path to validation data folder")
-    parser.add_argument('--epochs', type=int, default=10, help="Number of epochs")
+    parser.add_argument('--epochs', type=int, default=200, help="Number of epochs")
     parser.add_argument('--batch_size', type=int, default=32, help="Batch size")
     parser.add_argument('--lr', type=float, default=1e-3, help="Learning rate")
     parser.add_argument('--checkpoint', type=str, default=None, help="Path to checkpoint to resume training")

@@ -12,12 +12,10 @@ def get_transforms(train=True, image_size=(224, 224)):
 
     if train:
         train_transforms = [
-            transforms.Resize(256),
-            transforms.RandomResizedCrop(image_size, scale=(0.5, 1.0)),
+            transforms.RandomResizedCrop(image_size, scale=(0.8, 1.0)),
             transforms.RandomHorizontalFlip(p=0.5),
-            transforms.RandomRotation(15),
-            transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
-            transforms.RandomAffine(degrees=0, translate=(0.1, 0.1)),
+            transforms.ColorJitter(brightness=0.1, contrast=0.1, saturation=0.1),
+            transforms.RandomAffine(degrees=10, translate=(0.05, 0.05)),
         ]
         return transforms.Compose(train_transforms + base_transforms)
     else:
