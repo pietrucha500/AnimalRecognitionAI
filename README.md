@@ -30,25 +30,25 @@ Dane zostały podzielone w proporcji train/val/test = 70/15/15
 ### Wyniki:
 Wytrenowany model osiągnął następujące wyniki:
 
-- Test Loss: 0.1243
-- Test Accuracy: 0.9662
-- Train Loss: 0.2395  
-- Train Accuracy: 0.9352
+- Test Loss: 0.2395
+- Test Accuracy: 0.9352
 
-| Klasa     | Precision | Recall | F1-score | Support |
-|-----------|-----------|--------|----------|---------|
-| butterfly | 0.96      | 0.97   | 0.96     | 580     |
-| cat       | 0.98      | 0.96   | 0.97     | 464     |
-| dog       | 0.98      | 0.94   | 0.96     | 1370    |
-| elephant  | 0.95      | 0.98   | 0.97     | 401     |
-| horse     | 0.92      | 0.99   | 0.95     | 726     |
-| sheep     | 0.95      | 0.96   | 0.96     | 512     |
-| spider    | 0.98      | 0.97   | 0.98     | 1342    |
-| squirrel  | 0.95      | 0.99   | 0.97     | 518     |
-| **Accuracy**    |       |        | **0.97** | 7288    |
-| **Macro avg**   | 0.96  | 0.97   | 0.97     | 7288    |
-| **Weighted avg**| 0.97  | 0.97   | 0.97     | 7288    |
-
+| Klasa         | precision    | recall   | f1-score   | support   |
+|---------------|--------------|----------|------------|-----------|
+| butterfly     | 0.96         | 0.94     | 0.95       | 580       |
+| cat           | 0.91         | 0.92     | 0.92       | 464       |
+| chicken       | 0.95         | 0.95     | 0.95       | 851       |
+| cow           | 0.95         | 0.86     | 0.90       | 524       |
+| dog           | 0.91         | 0.94     | 0.92       | 1370      |
+| elephant      | 0.95         | 0.94     | 0.94       | 401       |
+| horse         | 0.95         | 0.91     | 0.93       | 726       |
+| sheep         | 0.88         | 0.94     | 0.91       | 512       |
+| spider        | 0.97         | 0.96     | 0.97       | 1342      |
+| squirrel      | 0.90         | 0.96     | 0.93       | 518       |
+| ------------- | ------------ | -------- | ---------- | --------- |
+| accuracy      |              |          | 0.94       | 7288      |
+| macro avg     | 0.93         | 0.93     | 0.93       | 7288      |
+| weighted avg  | 0.94         | 0.94     | 0.94       | 7288      |
 ---
 
 ## Spis treści
